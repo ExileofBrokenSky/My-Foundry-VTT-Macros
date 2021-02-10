@@ -3,6 +3,9 @@
 Requires a minimum of the mods DAE, Midi-QOL, and Time's Up installed
 
 ## Ongoing Fire Damage
+
+Say you just blasted someone with a sheet of fire, they took the damage but the spell or power says that flammable objects should keep burning, yet, often this gets overlooked and is tedious for GM's to track manually. Enter the burning effect.
+
 * Make a macro named Burning and set it to run as script
 
 Copy paste the following. Original [here:](https://gitlab.com/tposney/times-up)
@@ -27,4 +30,24 @@ if (args[0] === "each") {
   }
 ```
 * Get a spell/power that has a saving throw
+
+![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Images/fire%20spell.png "A fire power with a saving throw")
+
+* I duplicated it for safety, then added damage the ongoing damage to the `other formula` field.
+
+* Adding `[fire]` after the die roll let's Midi recognize the damage type so it can automate resistance or immunity, since the damage type dropdown just above is not looked at when using the other formula.
+
+* For more generic use, You could add any string there from typical damage types or custom, as long as the target has a matching or custom (non case sensitive) damage resistance/immunity/vulnerability, Midi it will apply it properly. *I.E.* `[silver]` `[dark]`
+
+![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Images/fire%20spell%202.png "Add the ongoing burn damage to the 'Other Formula' field")
+
+* Create a new active effect through DAE, and set the macro repeat to 'Start of each turn..." Since this effect will be slapped on the target, it will happen at the start of the burning creature's turn.
+
+![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Images/fire%20spell%203.png "Setting when the damage macro to run at the start of the turn")
+
+* Set the effect to Macro Execute, and give it the name of the macro we created above: Burning.
+
+![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Images/fire%20spell%204.png "N")
+
+* Now equip the spell-item and start a combat in Foundry and use the spell on an enemy. Should they fail the save, they will have the effect applied.
 
