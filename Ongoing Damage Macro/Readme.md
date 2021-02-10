@@ -10,7 +10,7 @@ Say you just blasted someone with a sheet of fire, they took the damage but the 
 
 * Make a macro named Burning and set it to run as script
 
-Copy paste the following. Original [here:](https://gitlab.com/tposney/times-up)
+Copy paste the following. Original [here](https://gitlab.com/tposney/times-up) from the creator of these mods. I'm just here to spell things out a little bit for the less tech savvy.
 ```javascript
 if (args[0] === "each") {
     const lastArg = args[args.length-1];
@@ -53,11 +53,11 @@ if (args[0] === "each") {
 
 * Now equip the spell-item and start a combat in Foundry and use the spell on an enemy. Should they fail the save, they will have the effect applied.
 
+* I gave this enemy fire resistance to show that it auto reduced the damage.
+
 ![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Images/fire%20spell%205.png "Behold: Fire!")
 
 * When their turns begins the macro will be called and immediately ask for a save (at least with my Midi-QOL settings for saving throws)
-
-* I gave the enemy fire resistance to show that it auto reduced the damage from 3 to 1
 
 ![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Images/fire%20spell%206.png "Ongoing Damage")
 
