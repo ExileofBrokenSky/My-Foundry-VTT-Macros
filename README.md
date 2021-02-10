@@ -1,4 +1,4 @@
-# Macros and Mods to make things cool in foundry. 
+# Macros and Mods to make things cool in Foundry VTT. 
 
 Tested on Foundry 0.7.9 with DND5e 1.2.4
 
