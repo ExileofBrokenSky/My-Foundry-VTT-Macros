@@ -47,7 +47,22 @@ if (args[0] === "each") {
 
 * Set the effect to Macro Execute, and give it the name of the macro we created above: Burning.
 
-![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Images/fire%20spell%204.png "N")
+![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Images/fire%20spell%204.png "Set the call to the 'Burning' macro")
 
 * Now equip the spell-item and start a combat in Foundry and use the spell on an enemy. Should they fail the save, they will have the effect applied.
 
+![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Images/fire%20spell%205.png "Behold: Fire!")
+
+* When their turns begins the macro will be called and immediately ask for a save (at least with my Midi-QOL settings for saving throws)
+
+* I gave the enemy fire resistance to show that it auto reduced the damage from 3 to 1
+
+![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Images/fire%20spell%206.png "Ongoing Damage")
+
+* When they finally do make a save, the effect will remove itself without rolling the damage.
+
+![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Images/fire%20spell%207.png "Fire Supression System complete!")
+
+* Once you have the Burning macro made, with a bit of work you can add the `Other Formula` damage and a similar `DAE effect` that executes the Burning macro to any applicable power, though the power/weapon/feature must require a saving throw or the macro will fail.
+
+FLAME ON!
