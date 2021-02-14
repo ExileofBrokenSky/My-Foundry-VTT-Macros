@@ -134,7 +134,7 @@ function smite(actor, forcePoints, criticalHit) {
         if (criticalHit) {
             theRollText+= `+(${numDice}*8)`; //use this for Maximized Crit Dice, don't use both
             //theRollText+= `+${numDice}d8`; //use this for regular double Crit Dice, don't use both
-            flavorText = { flavor: "Macro Force-Empowered Strike - Critical Damage Roll (Energy)", speaker };
+            flavorText = { flavor: "Force-Empowered Strike - Critical Damage Roll (Energy)", speaker };
         }
         let theRoll = new Roll(theRollText);
         theRoll.roll().toMessage(flavorText)
@@ -158,6 +158,7 @@ function smite(actor, forcePoints, criticalHit) {
 }
 ```
 Yeah, it's a mouthful, once you slap this bad-boy into your macro all you have to do next is a few checks and then call it somehow.
-* First, you need a character with Guardian class levels.
+* First, you need a character with Guardian class levels who has Force Points for their Primary Resource.
 * Next you need to either attach the macro to a feature and use it, or give the player access to the macro and they can use it that way.
+
 
