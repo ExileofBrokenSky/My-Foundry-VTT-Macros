@@ -67,7 +67,12 @@ if (hasAvailableFP(s_actor)) {
             if (confirmed) {
                 let forcePoints= parseInt(html.find('[name=slot-level]')[0].value);
                 let criticalHit = html.find('[name=criticalCheckbox]')[0].checked;
-                smite(s_actor, forcePoints, criticalHit);
+				if (hasEnoughFP(s_actor,forcePoints)){
+					smite(s_actor, forcePoints, criticalHit);
+				}
+				else{
+					return ui.notifications.error(`Not enough Force Points.`);
+				}
             }
         }
     }).render(true);
@@ -110,6 +115,18 @@ if (hasAvailableFP(s_actor)) {
     }
     return false;
  }
+
+/**
+ * Returns whether the actor has enough force points.
+ * @param {Actor5e} actor - the actor to get slot information from.
+ * @returns {boolean} True if enough force points are available to be used.
+ */
+function hasEnoughFP(actor, cost) {
+	if(actor.data.data.resources.primary.value - cost >= 0){
+		return true;
+	}
+	return false;
+}
 
 /**
  * Use the controlled token to smite the targeted token.
@@ -170,3 +187,5 @@ You can find that setting here:
 ![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Force-Empowered%20Strikes/On%20Use%20Macro%20call%20Midi-QOL%20setting.png)
 
 When you use it, A dialogue box will ask how many points you want to spend. If you wish to cancel just close the dialogue.
+
+
