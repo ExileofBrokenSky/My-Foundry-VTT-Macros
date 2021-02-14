@@ -119,6 +119,7 @@ if (hasAvailableFP(s_actor)) {
 /**
  * Returns whether the actor has enough force points.
  * @param {Actor5e} actor - the actor to get slot information from.
+ * @param {integer} cost - the amount of force points the effect should cost
  * @returns {boolean} True if enough force points are available to be used.
  */
 function hasEnoughFP(actor, cost) {
@@ -131,7 +132,7 @@ function hasEnoughFP(actor, cost) {
 /**
  * Use the controlled token to smite the targeted token.
  * @param {Actor5e} actor - the actor that is performing the action.
- * @param {integer} slotLevel - the amount of force points being spent.
+ * @param {integer} forcePoints - the amount of force points being spent.
  * @param {boolean} criticalHit - whether the hit is a critical hit.
  */
 function smite(actor, forcePoints, criticalHit) {
