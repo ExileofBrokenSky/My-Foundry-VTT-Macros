@@ -67,12 +67,12 @@ if (hasAvailableFP(s_actor)) {
             if (confirmed) {
                 let forcePoints= parseInt(html.find('[name=slot-level]')[0].value);
                 let criticalHit = html.find('[name=criticalCheckbox]')[0].checked;
-				if (hasEnoughFP(s_actor,forcePoints)){
-					smite(s_actor, forcePoints, criticalHit);
-				}
-				else{
-					return ui.notifications.error(`Not enough Force Points.`);
-				}
+		if (hasEnoughFP(s_actor,forcePoints)){
+			smite(s_actor, forcePoints, criticalHit);
+		}
+		else{
+			return ui.notifications.error(`Not enough Force Points.`);
+		}
             }
         }
     }).render(true);
