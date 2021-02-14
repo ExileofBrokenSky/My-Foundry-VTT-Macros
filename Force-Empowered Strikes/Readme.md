@@ -187,6 +187,7 @@ You can find that setting here:
 
 ![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Force-Empowered%20Strikes/On%20Use%20Macro%20call%20Midi-QOL%20setting.png)
 
-When you use it, A dialogue box will ask how many points you want to spend. If you wish to cancel just close the dialogue.
+When you use it, A dialogue box will ask how many points you want to spend. If you wish to cancel just close the dialogue. 
+You can attach the macro directly to a weapon and just cancel when you don't wish to use it, or keep it seperate on a feature and use it diliberately.
 
-
+![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Force-Empowered%20Strikes/FES.png)
