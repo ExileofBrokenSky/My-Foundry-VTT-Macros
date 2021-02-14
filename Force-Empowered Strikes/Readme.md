@@ -76,7 +76,7 @@ if (hasAvailableFP(s_actor)) {
     return ui.notifications.error(`No force points available to use this feature.`);    
 }
 
-//Below are hulper functions
+//Below are helper functions
 
 /**
  * Returns the maximum amount of force points that are allowed to be spent on one FES based on guardian level.
@@ -161,4 +161,12 @@ Yeah, it's a mouthful, once you slap this bad-boy into your macro all you have t
 * First, you need a character with Guardian class levels who has Force Points for their Primary Resource.
 * Next you need to either attach the macro to a feature and use it, or give the player access to the macro and they can use it that way.
 
+A simple way is to use Midi-QOL's On Use Macro call:
 
+![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Force-Empowered%20Strikes/On%20Use%20Macro.png)
+
+You can find that setting here:
+
+![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Force-Empowered%20Strikes/On%20Use%20Macro%20call%20Midi-QOL%20setting.png)
+
+When you use it, A dialogue box will ask how many points you want to spend. If you wish to cancel just close the dialogue.
