@@ -178,8 +178,8 @@ function smite(actor, forcePoints, criticalHit) {
 Yeah, it's a mouthful, once you slap this bad-boy into your macro all you have to do next is a few checks and then call it somehow.
 * First, you need a character with Guardian class levels who has Force Points for their Primary Resource.
 * Next you need to either attach the macro to a feature and use it, or give the player access to the macro and they can use it that way.
-
-A simple way is to use Midi-QOL's On Use Macro call:
+* One way is to use DAE with Macro Execute and give it the name of our macro.
+* An even simpler way is to use Midi-QOL's On Use Macro call, which does basically the same thing:
 
 ![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Force-Empowered%20Strikes/On%20Use%20Macro.png)
 
