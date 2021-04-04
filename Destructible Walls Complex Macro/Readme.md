@@ -1,8 +1,4 @@
 ## Destructable Wall Macro
-
-![](https://user-images.githubusercontent.com/28786777/113518232-f67a5000-9552-11eb-8c56-343bf11391c8.mp4)
-
-
 Requires Mods:
 *		Dynamic Active Effects
 *		Combat Utility Belt
