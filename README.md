@@ -9,3 +9,7 @@ Somemods will require other mods, they will have specifics listed.
 ## Ongoing Damage
 
 [Ongoing Damage Macro](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Ongoing%20Damage%20Macro/Readme.md)
+
+## Force Empowered Strikes - SW5e specific
+
+[Force Empowered Strikes Macro](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Force-Empowered%20Strikes/Readme.md)
