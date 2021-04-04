@@ -4,7 +4,7 @@ Requires Mods:
 *		Combat Utility Belt
 *		Token Attacher
 *		Select Tool Everywhere (to attach lights)
-*		Fornace (maybe)
+*		Furnace (maybe)
 ## Overly Convulted Setup:
 *		Design a map with destructable walls in mind.
 *		Use your digital graphics skills to make a replica or cracked version of a wall.
