@@ -7,7 +7,7 @@ Required Mods:
 *		Furnace (maybe)
 ## Overly Convoluted Setup:
 *	Design a map with destructable walls in mind.
-*	Use your digital graphics skills to make a replica or cracked version of a wall. I suggest making it exactly 2 grid squares of mostly transparent with the wall graphic in the center. If your grid size is 100 pc per grid, then the image should be 100 x 200
+*	Use your digital graphics skills to make a replica or cracked version of a wall. I suggest making it exactly 2 grid squares of mostly transparent with the wall graphic in the center. If your grid size is 100 px per grid, then the image should be 100 x 200
 *	Make an NPC Actor for the wall, make sure it's prototype tokens are unlinked.
 *	Give the prototype token a transparent image (recommended) or a wall image you made above; edit it's image size to fit if so.
 *	Drag your wall token on scene. 
