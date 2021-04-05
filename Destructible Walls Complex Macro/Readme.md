@@ -7,9 +7,9 @@ Requires Mods:
 *		Furnace (maybe)
 ## Overly Convulted Setup:
 *		Design a map with destructable walls in mind.
-*		Use your digital graphics skills to make a replica or cracked version of a wall. I suggest making it exactly 2 grid squares of mostly transparent with the wall graphic in the center.
+*		Use your digital graphics skills to make a replica or cracked version of a wall. I suggest making it exactly 2 grid squares of mostly transparent with the wall graphic in the center. If your grid size is 100 pc per grid, then the image should be 100 x 200
 *		Make an NPC Actor for the wall, make sure it's prototype tokens are unlinked.
-*		Give the prototype token a transparent image (reccomended) or a wall image you made above, edit it's image size to fit (1x2 if you followed the above suggestion)
+*		Give the prototype token a transparent image (reccomended) or a wall image you made above; edit it's image size to fit if so.
 *		Drag your wall token on screen. 
 *		Attach a tile for the wall's image you made above (Optional)
 *		Attach a light source of type Universal Light, that is directly atop the token. A radius of 0.01 for dim light allows the token to be targeted without actually lighting up anything.
