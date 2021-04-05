@@ -1,5 +1,5 @@
 ## Destructable Wall Macro
-Requires Mods:
+Required Mods:
 *		Dynamic Active Effects
 *		Combat Utility Belt
 *		Token Attacher
