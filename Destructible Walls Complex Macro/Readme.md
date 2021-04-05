@@ -7,9 +7,9 @@ Requires Mods:
 *		Furnace (maybe)
 ## Overly Convulted Setup:
 *		Design a map with destructable walls in mind.
-*		Use your digital graphics skills to make a replica or cracked version of a wall.
+*		Use your digital graphics skills to make a replica or cracked version of a wall. I suggest making it exactly 2 grid squares of mostly transparent with the wall graphic in the center.
 *		Make an NPC Actor for the wall, make sure it's prototype tokens are unlinked.
-*		Give the prototype token a transparent image or a wall image you made above. 
+*		Give the prototype token a transparent image (reccomended) or a wall image you made above, edit it's image size to fit (1x2 if you followed the above suggestion)
 *		Drag your wall token on screen. 
 *		Attach a tile for the wall's image you made above (Optional)
 *		Attach a light source of type Universal Light, that is directly atop the token. A radius of 0.01 for dim light allows the token to be targeted without actually lighting up anything.
@@ -18,18 +18,20 @@ Requires Mods:
 *		Use CUB's triggler to make a trigger that activates on 0hp for npc's only
 *		Use CUB to make or edit a defeated/dead condition.
 *		Copy this macro into your world and name it something.
-*		Edit the Active Effect Config of the above condition enter: [macro.execute] [custom] ["the name you gave this macro"]
+*		Edit the Active Effect Config of the above condition and enter the following: [macro.execute] [custom] ["the name you gave this macro"]
 *		Target and kill the wall and it should disappear, taking the attched wall and other stuff with it.
 CUB only works when the DM is on the same scene, thus the same rule applies to this macro.
-Players may receive harmless error messages about them not having permission to delete walls/lights/tiles. Those can be safely ignored.
+Players may receive error messages about them not having permission to delete walls/lights/tiles. Those can be safely ignored as they dont prevent it from working. 
+WIP to get rid of the errors -_-'
 
 ## The Macro
 ```javascript
-
 const lastArg = args[args.length-1];
 let wallToken = canvas.tokens.get(lastArg.tokenId);
 			
 if (wallToken.data.flags["token-attacher"] && wallToken.data.flags["token-attacher"].attached["Wall"].length > 0) {
-	wallToken.delete();
+	if(game.user.isGM){
+		wallToken.delete();
+	}
 }
 ```
