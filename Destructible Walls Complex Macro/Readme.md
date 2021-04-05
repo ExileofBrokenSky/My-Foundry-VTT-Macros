@@ -5,7 +5,7 @@ Requires Mods:
 *		Token Attacher
 *		Select Tool Everywhere (to attach lights)
 *		Furnace (maybe)
-## Overly Convulted Setup:
+## Overly Convoluted Setup:
 *	Design a map with destructable walls in mind.
 *	Use your digital graphics skills to make a replica or cracked version of a wall. I suggest making it exactly 2 grid squares of mostly transparent with the wall graphic in the center. If your grid size is 100 pc per grid, then the image should be 100 x 200
 *	Make an NPC Actor for the wall, make sure it's prototype tokens are unlinked.
