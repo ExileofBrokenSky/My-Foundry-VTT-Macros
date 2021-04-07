@@ -29,7 +29,7 @@ Required Mods:
 const lastArg = args[args.length-1];
 let wallToken = canvas.tokens.get(lastArg.tokenId);
 			
-if (wallToken.data.flags["token-attacher"] && wallToken.data.flags["token-attacher"].attached["Wall"].length > 0) {
+if (wallToken.data.flags["token-attacher"]?.attached?.["Wall"]?.length > 0) {
 	if(game.user.isGM){
 		wallToken.delete();
 	}
