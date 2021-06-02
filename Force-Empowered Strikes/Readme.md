@@ -67,12 +67,12 @@ if (hasAvailableFP(s_actor)) {
             if (confirmed) {
                 let forcePoints= parseInt(html.find('[name=slot-level]')[0].value);
                 let criticalHit = html.find('[name=criticalCheckbox]')[0].checked;
-		if (hasEnoughFP(s_actor,forcePoints)){
-			smite(s_actor, forcePoints, criticalHit);
-		}
-		else{
-			return ui.notifications.error(`Not enough Force Points.`);
-		}
+				if (hasEnoughFP(s_actor,forcePoints)){
+					smite(s_actor, forcePoints, criticalHit);
+				}
+				else{
+					return ui.notifications.error(`Not enough Force Points.`);
+				}
             }
         }
     }).render(true);
@@ -91,9 +91,9 @@ if (hasAvailableFP(s_actor)) {
  function getFocusedStrikes(actor) {
      let strikes = 0;
      let levels = 0;
-     let actorClass = s_actor?.data.items.find(i => i.name === "Guardian")
+     let actorClass = s_actor?.classes.guardian;
      if(actorClass != undefined){   
-         levels = actorClass.data.levels;
+         levels = actorClass.data.data.levels;
      }
      if (levels > 16){strikes = 6;}
      else if (levels > 12){strikes = 5;}
@@ -145,7 +145,7 @@ function smite(actor, forcePoints, criticalHit) {
     targets.forEach(target => {
         let numDice = forcePoints;
 //look for improved FES feature and implement
-        let hasImprovedFES = s_actor?.data.items.find(i => i.name === "Improved Force-Empowered Strikes") != undefined;
+        let hasImprovedFES = actor.data.items.find(i => i.name === "Improved Force-Empowered Strikes") != undefined;
         if (hasImprovedFES) numDice += 1;
         let theRollText = `${numDice}d8`;
         let flavorText = { flavor: "Force-Empowered Strike - Damage Roll (Energy)", speaker };
