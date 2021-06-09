@@ -198,5 +198,6 @@ You can find that setting here:
 
 When you use it, A dialogue box will ask how many points you want to spend. If you wish to cancel just close the dialogue. 
 You can attach the macro directly to a weapon and just cancel when you don't wish to use it, or keep it seperate on a feature and use it diliberately.
+For added functionality if the character has the items/features named exactly "Improved Force-Empowered Strikes", "Gauntlets of the Warrior", or "Guardian Offensive Augment" in their inventory, functionality for those items regarding Force-Empowered strikes will be implimented.
 
 ![](https://github.com/ExileofBrokenSky/My-Foundry-VTT-Macros/blob/main/Force-Empowered%20Strikes/FES.png)
