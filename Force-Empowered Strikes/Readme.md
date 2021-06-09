@@ -137,7 +137,8 @@ function hasEnoughFP(actor, cost) {
  */
 function smite(actor, forcePoints, criticalHit) {
     let targets = game.user.targets;
-
+	let minRoll = 1;
+	let dieFaces = 8;
     if (targets.size !== 1) {
         return ui.notifications.error("You must target exactly one token to Force Empowered Strike.");
     }
@@ -147,15 +148,23 @@ function smite(actor, forcePoints, criticalHit) {
 //look for improved FES feature and implement
         let hasImprovedFES = actor.data.items.find(i => i.name === "Improved Force-Empowered Strikes") != undefined;
         if (hasImprovedFES) numDice += 1;
-        let theRollText = `${numDice}d8`;
+//look for Gauntlets of the Warrior and implement its changes if so
+		let hasGotW = (actor.data.items.find(i => i.name === "Gauntlets of the Warrior") != undefined && actor.classes.guardian.data.data.levels >= 5)
+		if(hasGotW) minRoll = Math.max(Math.max(actor.data.data.abil.cha.mod, actor.data.data.abil.wis.mod),1);
+//look for Guardian Offensive Augment and implement its changes if so, only handles bumping a d8 to a d10, modify code if bumping to d12
+		let hasGOA = actor.data.items.find(i => i.name === "Guardian Offensive Augment") != undefined;
+		if(hasGOA) dieFaces = 10;
+//roll the dice
+        let theRollText = `${numDice}d${dieFaces}min${minRoll}`;
+		console.log(theRollText);
         let flavorText = { flavor: "Force-Empowered Strike - Damage Roll (Energy)", speaker };
         if (criticalHit) {
-            theRollText+= `+(${numDice}*8)`; //use this for Maximized Crit Dice, don't use both
-            //theRollText+= `+${numDice}d8`; //use this for regular double Crit Dice, don't use both
+            theRollText+= `+(${numDice}*${dieFaces})`; //use this for Maximized Crit Dice, don't use both
+            //theRollText+= `+${numDice}d${dieFaces}min${minRoll}`; //use this for regular double Crit Dice, don't use both
             flavorText = { flavor: "Force-Empowered Strike - Critical Damage Roll (Energy)", speaker };
         }
         let theRoll = new Roll(theRollText);
-        theRoll.roll().toMessage(flavorText)
+        theRoll.roll(async=false).toMessage(flavorText)
 //Assuming Energy damage, if not, replace energy with kinetic or another damage type.
 //look for resistance, immunity, or vulnerability in target and factor into damage
         let hasResistance = target.actor.data.data.traits.dr.value.includes("energy");
