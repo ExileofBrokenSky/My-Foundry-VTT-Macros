@@ -149,11 +149,11 @@ function smite(actor, forcePoints, criticalHit) {
         let hasImprovedFES = actor.data.items.find(i => i.name === "Improved Force-Empowered Strikes") != undefined;
         if (hasImprovedFES) numDice += 1;
 //look for Gauntlets of the Warrior and implement its changes if so
-	let hasGotW = (actor.data.items.find(i => i.name === "Gauntlets of the Warrior") != undefined && actor.classes.guardian.data.data.levels >= 5)
-	if(hasGotW) minRoll = Math.max(Math.max(actor.data.data.abil.cha.mod, actor.data.data.abil.wis.mod),1);
+		let hasGotW = (actor.data.items.find(i => i.name === "Gauntlets of the Warrior") != undefined && actor.classes.guardian.data.data.levels >= 5)
+		if(hasGotW) minRoll = Math.max(Math.max(actor.data.data.abil.cha.mod, actor.data.data.abil.wis.mod),1);
 //look for Guardian Offensive Augment and implement its changes if so, only handles bumping a d8 to a d10, modify code if bumping to d12
-	let hasGOA = actor.data.items.find(i => i.name === "Guardian Offensive Augment") != undefined;
-	if(hasGOA) dieFaces = 10;
+		let hasGOA = actor.data.items.find(i => i.name === "Guardian Offensive Augment") != undefined;
+		if(hasGOA) dieFaces = 10;
 //roll the dice
         let theRollText = `${numDice}d${dieFaces}min${minRoll}`;
 		console.log(theRollText);
@@ -164,7 +164,7 @@ function smite(actor, forcePoints, criticalHit) {
             flavorText = { flavor: "Force-Empowered Strike - Critical Damage Roll (Energy)", speaker };
         }
         let theRoll = new Roll(theRollText);
-        theRoll.roll(async=false).toMessage(flavorText)
+        theRoll.roll().toMessage(flavorText)
 //Assuming Energy damage, if not, replace energy with kinetic or another damage type.
 //look for resistance, immunity, or vulnerability in target and factor into damage
         let hasResistance = target.actor.data.data.traits.dr.value.includes("energy");
