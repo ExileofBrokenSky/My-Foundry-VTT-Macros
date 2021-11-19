@@ -1,3 +1,5 @@
+*******Old - Use Midi-Qol's Overtime effects for something better*******
+
 Tested on Foundry 0.7.9 with DND5e 1.2.4
 
 Requires a minimum of the mods DAE, Midi-QOL, and Time's Up installed
