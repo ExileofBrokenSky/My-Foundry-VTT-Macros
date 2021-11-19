@@ -1,4 +1,4 @@
-//For use with Midi-Qol - with the workflow setting: Add macro to call on use checked. Make a macro and copy paste this test into it and make sure the macro is set to 'script' and save it. Then on your item that will be a medpac, in its 'On Use Macro' field in the details tab enter that name of the macro.
+//For use with Midi-Qol - with the workflow setting: Add macro to call on use checked. Make a macro and copy paste this text into it and make sure the macro is set to 'script' and save it. Then on your item that will be a medpac, in its 'On Use Macro' field in the details tab enter that name of the macro.
 //If set the item's rarity level it will scale up how much the item heals for.
 // !!----!!You must have an actor selected (different from targeted!!) for the macro to work it will give an error otherwise. With no target, the macro will default to self target, otherwise it will attempt to work on the target.
 
