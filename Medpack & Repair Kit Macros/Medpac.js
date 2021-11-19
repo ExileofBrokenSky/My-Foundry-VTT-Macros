@@ -187,31 +187,3 @@ A medpac is a quick-acting syringe filled with a concentrated dose of kolto. As 
 		HealingRoll.roll().toMessage(flavorText);
 		target.applyDamage(HealingRoll.total,-1);
 	}
-	
-/*	Super Secret Medicine Check stuff. notes for later
-	//Actor does a medicine check which modifies result of healing done.
-	let medchk = s_actor.rollSkill("med").then((x)=>{return x._total});
-	let result;
-	let getresult = async () => {
-		result = await medchk;
-	
-	
-		
-	};
-	getresult()
-*/
-
-
-
-
-/*
-spending full action gives advantage on medicine check.
-Medicine check results
-5 and under deal 1d4 damage instead of healing
-6 to 10 healling dice rolled with disadvantage
-11 to 15 straight roll + wismod
-16 to 20 healing dice rolled with advantage, + wis mod
-21 to 25 healing dice rolled with advantage, rerolling results under 3 + wis mod + prof mod
-26 to 30 maximized healing + wis mod + prof mod
-over 30  maximized healing x 2 + wis mod + prof mod
-*/
