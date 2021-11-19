@@ -1,4 +1,6 @@
 ## Destructable Wall Macro
+*****No longer works do to a change made in core targeting *****
+
 Required Mods:
 *		Dynamic Active Effects
 *		Combat Utility Belt
